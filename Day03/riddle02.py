@@ -13,7 +13,6 @@ def riddle1(inst_line):
     result = 0
     # Look in inst_line for mul(x,y)
     allMult = re.findall(r"mul\(([0-9]{1,3},[0-9]{1,3})\)|(do\(\))|(don't\(\))", inst_line)
-    print(re.findall(r"do\(\)", inst_line))
     print(allMult)
     allMult = [match[0] or match[1] or match[2] for match in allMult]
     mul_enabled = True
